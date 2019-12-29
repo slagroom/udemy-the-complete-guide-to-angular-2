@@ -1,0 +1,9 @@
+<app-game-control
+    (counterIncrement)="onCounterIncrement($event)"
+>
+</app-game-control>
+<ng-container *ngFor="let num of numbers" [ngSwitch]="num % 2">
+    <app-even *ngSwitchCase="0" [value]="num"></app-even>
+    <app-odd *ngSwitchCase="1" [value]="num"></app-odd>
+</ng-container>
+
