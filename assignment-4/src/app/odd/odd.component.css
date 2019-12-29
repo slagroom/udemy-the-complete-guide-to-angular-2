@@ -1,0 +1,7 @@
+p {
+    background-color: rgb(238, 144, 144);
+    border: 2px solid rgb(178, 32, 32);
+    border-radius: 5px;
+    color: rgb(178, 32, 32);
+    padding: 5px;
+}
