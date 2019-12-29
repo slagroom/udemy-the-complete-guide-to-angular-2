@@ -10,4 +10,27 @@
       </ol>
     </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="xs-col-12">
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="onToggleShowDetails()"
+      >
+        {{ showDetails ? 'Hide' : 'Display' }} Details
+    </button>
+    </div>
+    <div *ngIf="showDetails" class="xs-col-12">
+      <p>Secret Password = tuna</p>
+    </div>
+    <div *ngFor="let toggle of toggles, let i = index">
+      <p
+        [ngClass]="{ 'post-fourth-toggle' : i >= 4 }"
+        [ngStyle]="{ 'background-color': i >= 4 ? 'blue' : 'transparent' }"
+      >
+        {{ toggle.when }}: {{ toggle.shown ? 'Shown' : 'Hidden' }}
+      </p>
+    </div>
+  </div>
 </div>
